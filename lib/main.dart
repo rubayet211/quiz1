@@ -10,9 +10,17 @@ class Quiz1 extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
+    return MaterialApp(
       home: Scaffold(
-        body: StartScreen(),
+        body: Container(
+          decoration: const BoxDecoration(
+            gradient: LinearGradient(colors: [
+              Color.fromARGB(255, 81, 5, 143),
+              Color.fromARGB(255, 127, 40, 249)
+            ], begin: Alignment.topLeft, end: Alignment.bottomRight),
+          ),
+          child: const StartScreen(),
+        ),
       ),
     );
   }

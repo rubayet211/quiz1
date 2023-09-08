@@ -5,54 +5,33 @@ class StartScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Stack(
-      children: [
-        Container(
-          decoration: const BoxDecoration(
-            gradient: LinearGradient(colors: [
-              Color.fromARGB(255, 81, 5, 143),
-              Color.fromARGB(255, 127, 40, 249)
-            ], begin: Alignment.topLeft, end: Alignment.bottomRight),
+    return Center(
+      child: Column(
+        mainAxisSize: MainAxisSize.min,
+        children: [
+          Image.asset(
+            'assets/images/quiz-logo.png',
+            width: 300,
           ),
-        ),
-        Center(
-          child: Column(mainAxisAlignment: MainAxisAlignment.center, children: [
-            SizedBox(
-              width: 300,
-              height: 300,
-              child: Image.asset(
-                'assets/images/quiz-logo.png',
-                width: 200,
-              ),
+          const SizedBox(height: 70),
+          const Text(
+            'Learn Flutter the fun way!',
+            style: TextStyle(
+              color: Color.fromARGB(255, 212, 176, 250),
+              fontSize: 25,
             ),
-            SizedBox(
-              height: 40,
+          ),
+          const SizedBox(height: 30),
+          OutlinedButton(
+            onPressed: () {},
+            style: OutlinedButton.styleFrom(),
+            child: const Text(
+              'Start Quiz',
+              style: TextStyle(color: Colors.white),
             ),
-            Text(
-              'Learn Flutter the fun way',
-              style: TextStyle(
-                fontSize: 20,
-                color: Colors.white,
-              ),
-            ),
-            SizedBox(
-              height: 20,
-            ),
-            TextButton(
-              onPressed: () {},
-              child: Text(
-                'Start Quiz',
-                style: TextStyle(color: Colors.white),
-              ),
-              style: TextButton.styleFrom(
-                backgroundColor: Color.fromARGB(255, 119, 23, 215),
-                padding: EdgeInsets.symmetric(horizontal: 30, vertical: 15),
-                elevation: 5,
-              ),
-            ),
-          ]),
-        ),
-      ],
+          ),
+        ],
+      ),
     );
   }
 }
