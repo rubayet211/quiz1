@@ -10,9 +10,6 @@ class QuestionsScreen extends StatefulWidget {
 class _QuestionsScreenState extends State<QuestionsScreen> {
   @override
   Widget build(BuildContext context) {
-    return Container(
-      color: Colors.teal,
-      child: const Text('New Screen'),
-    );
+    return Text('Questions Screen');
   }
 }
